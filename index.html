@@ -146,6 +146,82 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/25/ICMP%E5%8D%8F%E8%AE%AE%E5%8C%85%E4%B8%A2%E5%BC%83/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Junc">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="军尼桑的花拳">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/25/ICMP%E5%8D%8F%E8%AE%AE%E5%8C%85%E4%B8%A2%E5%BC%83/" class="post-title-link" itemprop="url">ICMP协议包丢弃</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-24 17:29:40" itemprop="dateCreated datePublished" datetime="2021-12-24T17:29:40Z">2021-12-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-27 06:51:29" itemprop="dateModified" datetime="2021-12-27T06:51:29Z">2021-12-27</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="ICMP协议包丢弃"><a href="#ICMP协议包丢弃" class="headerlink" title="ICMP协议包丢弃"></a>ICMP协议包丢弃</h1><p>尤其记得一位前辈的名言：你是一名程序员，不应是linux程序员，不应该是C程序员。<br>计算机的世界包罗万象，一直奉为职业生涯金句，不断拓展知识面。然想法是好的，行动上总是差强人意。这里也就是对ICMP包丢弃的方法做简单记录，底层原理有机会再分析。</p>
+<p>闲言少序</p>
+<p><img src="https://raw.githubusercontent.com/Juncx/blog_images/main/483a7b7eeee9fbc5e6a78d63cac6af18.png"></p>
+<p>平台前段时间私有化部署在验收时，扫描到了各种漏洞。想想也是够谨慎的，私有化部署都是在局域网内部，与外网隔绝。这种漏洞也是将安全意识拉满。</p>
+<p>ICMP包丢弃常规手法有两种：</p>
+<ol>
+<li>修改内核参数</li>
+<li>防火墙icmp包丢弃</li>
+</ol>
+<p>这里选最简单方式，修改内核参数。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加icmp包忽略</span></span><br><span class="line"><span class="built_in">echo</span> net.ipv4.icmp_echo_ignore_all=1 &gt;&gt; /etc/sysctl.conf</span><br><span class="line"><span class="comment"># 参数生效</span></span><br><span class="line">sysctl -p</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/25/iptables%E4%B8%A2%E5%BC%83%E6%8C%87%E5%AE%9Aip%E6%95%B0%E6%8D%AE%E5%8C%85/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -200,6 +276,76 @@
 
 <p>附2：</p>
 <p>我始终没有比较好的方法找到源进程，欢迎交流。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/23/%E5%B8%85%E6%B0%94%E9%80%BC%E4%BA%BA%E7%BB%84%E5%90%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Junc">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="军尼桑的花拳">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/23/%E5%B8%85%E6%B0%94%E9%80%BC%E4%BA%BA%E7%BB%84%E5%90%88/" class="post-title-link" itemprop="url">帅气逼人组合</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-23 11:02:03" itemprop="dateCreated datePublished" datetime="2021-12-23T11:02:03Z">2021-12-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-27 06:27:08" itemprop="dateModified" datetime="2021-12-27T06:27:08Z">2021-12-27</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <div align=left>
+    <img src="https://raw.githubusercontent.com/Juncx/blog_images/main/life/%E5%B8%85%E6%B0%94%E9%80%BC%E4%BA%BA%E7%BB%84%E5%90%88.jpg" style="zoom: 33%;" />
+</div>
+
+
+<p>发发呀~<br>👀其实我也挺帅气~~😃💖👀</p>
 
       
     </div>
@@ -351,7 +497,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
